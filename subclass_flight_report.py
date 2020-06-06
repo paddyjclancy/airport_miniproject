@@ -4,8 +4,7 @@ from class_flights import *
 class FlightReport(Flight):
 
     def __init__(self, flight, departure, destination, distance, plane, capacity):
-        self.flight = flight.capitalize()
-        self.departure = departure
+        super().__init__(flight, departure)
 #       self.eta = eta
         self.destination = destination.capitalize()
 #       self.distance = distance
@@ -20,6 +19,7 @@ class FlightReport(Flight):
 
     def alter_aircraft(self, new_plane):
         self.plane = new_plane
+
 
     def show_report(self):
         report = vars(self)
