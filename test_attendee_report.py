@@ -2,7 +2,7 @@ from subclass_attendee_report import *
 from class_flights import *
 from subclass_flight_report import *
 from subclass_staff import *
-from sub_class_passengers import *
+from subclass_passengers import *
 
 # Set up
 pioneer = AttendeeReport('Pioneer')

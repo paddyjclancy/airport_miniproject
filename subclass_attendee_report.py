@@ -1,6 +1,6 @@
 from class_flights import *
 from class_people import *
-from sub_class_passengers import *
+from subclass_passengers import *
 from subclass_staff import *
 
 

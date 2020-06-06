@@ -1,8 +1,17 @@
+from class_airport import *
 
 # Parent Class = Flight()
-    #
+#
 # Sub Classes = FlightReport(), AttendeeReport(), Cities(), Planes()
-    # FlightReport() -
-    # AttendeeReport() -
-    # Cities() - destination, distance
-    # Planes() - model, capacity, cruising_speed
+# ME    # FlightReport() -
+# ME    # AttendeeReport() -
+        # Cities() - destination, distance
+        # Planes() - model, capacity, cruising_speed
+
+# Pseudo
+# TDD
+# Code
+
+
+class Flight(Airport):
+    pass
