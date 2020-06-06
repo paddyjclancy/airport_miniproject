@@ -34,3 +34,8 @@ print("Printing flight report: Pioneer...")
 # Test
 print("\n")
 pioneer.show_report()
+
+
+# Further steps:
+#       Automate ETA calc. by adding method and required attributes (avg speed)
+#       Add user friendly module

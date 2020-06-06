@@ -32,5 +32,6 @@ class AttendeeReport(Flight):
 
 
     def print_manifest(self):
+        print(f"\nManifest for personnel on flight {self.flight}: ")
         for person in self.manifest:
             print(vars(person))
