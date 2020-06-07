@@ -46,7 +46,7 @@ crew6 = Staff('Niamh', 'Aer Lingus', 'Cabin Crew', '13/04/93', 1004624, 'Ireland
 
 pilot1 = Staff('Martin', 'BA', 'Pilot', '19/11/68', 9927729, 'Switzerland')
 pilot2 = Staff('Ed', 'BA', 'Pilot', '18/10/71', 4137972, 'UK')
-pilot3 = Staff('Declan', 'Aer Lingus', 'Pilot', '06/06/78', 8493799 'Ireland')
+pilot3 = Staff('Declan', 'Aer Lingus', 'Pilot', '06/06/78', 8493799, 'Ireland')
 copilot1 = Staff('Wessel', 'BA', 'Copilot', '20/03/92', 6229163, 'Netherlands')
 copilot2 = Staff('Fabio', 'BA', 'Copilot', '23/04/82', 5528631, 'Italy')
 copilot3 = Staff('Wanda', 'American Airlines', 'Copilot', '07/02/88', 7583957, 'USA')
