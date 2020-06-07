@@ -1,4 +1,5 @@
 from subclass_flight_report import *
+from subclass_staff import *
 
 
 # Set up

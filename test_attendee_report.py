@@ -4,7 +4,7 @@ from subclass_staff import *
 from subclass_passengers import *
 
 # Set up
-pioneer = AttendeeReport('Pioneer')
+pioneer = AttendeeReport('Pioneer', '0835')
 
 # Explain
 print("Test 1:")         # Append items to report list
@@ -23,10 +23,12 @@ else:
     print("Append complete: ", False)
 # Explain
 print("\nTest 2:")         # Produce full report
-print("Testing: print_manifest()...")
+print("Testing: full_manifest()...")
 # Test
-pioneer.print_manifest()
-
+pioneer.full_manifest()
+# Explain
 
 # Further steps:
 #       Sort manifest through hierarchy - pilot, copilot, crew, first, economy, infant
+#       Create more manifests - staff, passengers, first, infants
+#       Improve visual aesthetic of manifest
