@@ -13,3 +13,8 @@ class Plane(Airport):
     def set_flight_no(self, new_no):
         self.__flight_no = new_no
         print(f"Flight number allocated to plane:  {self.plane_model} updated to: {self.__flight_no}")
+
+
+airbus0 = Plane("A320", "BA", 10000, 150)
+airbus1 = Plane("A321", "BA", 10001, 200)
+boeing = Plane("B-787", "BA", 10500, 300)
