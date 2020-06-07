@@ -16,5 +16,12 @@ class Plane(Airport):
 
 
 airbus0 = Plane("A320", "BA", 10000, 150)
-airbus1 = Plane("A321", "BA", 10001, 200)
-boeing = Plane("B-787", "BA", 10500, 300)
+airbus1 = Plane("A320", "BA", 10001, 150)
+airbus2 = Plane("A320", "BA", 10002, 150)
+airbus3 = Plane("A321", "BA", 10003, 200)
+airbus4 = Plane("A321", "BA", 10004, 200)
+airbus5 = Plane("A321", "BA", 10005, 200)
+airbus6 = Plane("A321", "BA", 10006, 200)
+boeing0 = Plane("B-787", "BA", 10500, 300)
+boeing1 = Plane("B-787", "BA", 10501, 300)
+boeing2 = Plane("B-787", "BA", 10502, 300)
