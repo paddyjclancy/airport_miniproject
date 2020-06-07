@@ -49,20 +49,20 @@ class Passenger(People):
     def set_passport_number(self, new_pp):
         self.passport_no = new_pp
         name = self.get_full_name()
-        print(f"Passport number updated for passenger:   {name}\n New number:   {self.passport_no}")
+        return f"Passport number updated for passenger:   {name}\n New number:   {self.passport_no}"
 
     def get_ticket_type(self):
-        print(f"{self.ticket_type} ticket, price: {self.ticket_price}")
+        return self.ticket_type
 
     def set_ticket_type(self, new_ticket):
         self.ticket_type = new_ticket
         name = self.get_full_name()
-        print(f"Ticket type updated for passenger: {name}, to {self.ticket_type}")
+        return f"Ticket type updated for passenger: {name}, to {self.ticket_type}"
 
     def passenger_details(self):
         report = vars(self)
         for key, value in report.items():
-            print(key.capitalize(), ": ", value)
+            return key.capitalize(), ": ", value
 
 
 passenger1 = Passenger('Paddy', '06/05/97', 'British', '73469573')

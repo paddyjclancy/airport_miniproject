@@ -15,7 +15,7 @@ class Staff(People):
     def set_airline(self, new_airline):
         self.airline = new_airline
         name = self.get_full_name()
-        print(f"Airline changed for person:  {name}\n New airline:   {self.airline}")
+        print(f"Airline changed for person:  {name}\nNew airline:   {self.airline}")
 
     def get_title(self):
         return self.title
@@ -23,7 +23,7 @@ class Staff(People):
     def set_title(self, new_title):
         self.title = new_title
         name = self.get_full_name()
-        print(f"Job title changed for person:   {name}\n New title:   {self.title}")
+        print(f"Job title changed for person:   {name}\nNew title:   {self.title}")
 
     def get_tax_no(self):
         return self.__tax_no
@@ -31,7 +31,7 @@ class Staff(People):
     def set_tax_no(self, new_no):
         self.__tax_no = new_no
         name = self.get_full_name()
-        print(f"Tax number updated for person:   {name}\n New tax no:   {self.__tax_no}")
+        print(f"Tax number updated for person:   {name}\nNew tax no:   {self.__tax_no}")
 
 
 
