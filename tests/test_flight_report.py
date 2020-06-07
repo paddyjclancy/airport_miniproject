@@ -3,7 +3,7 @@ from subclass_staff import *
 
 
 # Set up
-pioneer = FlightReport('Pioneer', '0800', 'Paris', 290, 'A321', 300)
+
 
 
 # Explain

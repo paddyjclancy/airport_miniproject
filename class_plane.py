@@ -10,5 +10,6 @@ class Plane(Airport):
     def get_flight_no(self):
         return self.__flight_no
 
-    def set_flight_no(self):
-        return self.__flight_no
+    def set_flight_no(self, new_no):
+        self.__flight_no = new_no
+        print(f"Flight number allocated to plane:  {self.plane_model} updated to: {self.__flight_no}")
