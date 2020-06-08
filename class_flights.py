@@ -28,10 +28,11 @@ class Flight(Airport):
     def show_report(self):
         report = vars(self)
         for key, value in report.items():
-            print(key.capitalize(), ": ", value)
+            if key != "manifest":
+                print(key.capitalize(), ": ", value)
 
-    def append_manifest(self, passenger):
-        self.manifest.append(passenger)
+    def append_manifest(self, person):
+        self.manifest.append(person)
 
     def show_manifest(self):
         print(f"\nManifest for personnel on flight {self.flight}: ")
@@ -39,3 +40,6 @@ class Flight(Airport):
             print(vars(person))
 
 
+pioneer = Flight('Pioneer', '0800', 'Paris', '1h20', 'A320', 150)
+taurus = Flight('Taurus', '0815', 'Munich', '1h50', 'A321', 200)
+achilles = Flight('Achilles', '0820', 'Dusseldorf', '1h35', 'A320', 150)

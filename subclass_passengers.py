@@ -5,11 +5,12 @@ from class_people import *
 
 class Passenger(People):
 
-    def __init__(self, full_name, dob, nationality, passport_no, ticket_type=None, ticket_price=None,
+    def __init__(self, full_name, dob, nationality, passport_no, passenger_id=None, ticket_type=None, ticket_price=None,
                  boarding_pass=None):
         super().__init__(full_name, dob, nationality)
         self.boarding_pass = boarding_pass
         self.passport_no = passport_no
+        self.passenger_id = passenger_id
         self.ticket_type = ticket_type
         self.ticket_price = ticket_price
         self.details = {}
@@ -62,18 +63,18 @@ class Passenger(People):
 
     def passenger_details(self):
         self.details = {
-            "Name" : self.get_full_name(),
-            "DOB" : self.get_dob(),
-            "Nationality" : self.nationality,
-            "Passport" : self.passport_no,
-            "Ticket" : self.ticket_type,
-            "Ticket Price" : self.ticket_price,
-            "Boarding Pass" : self.boarding_pass
+            "Name": self.get_full_name(),
+            "DOB": self.get_dob(),
+            "Nationality": self.nationality,
+            "Passport": self.passport_no,
+            "Ticket": self.ticket_type,
+            "Ticket Price": self.ticket_price,
+            "Boarding Pass": self.boarding_pass
         }
         for key, value in self.details.items():
-            print(key, ": ", value)
+            print(f"{key}: {value}")
 
 
-passenger1 = Passenger('Paddy', '06/05/97', 'British', '73469573')
-passenger2 = Passenger('Georgina', '31/07/98', 'British', '34392642')
-passenger3 = Passenger('Lauren', '08/04/16', 'Austria', '63856975')
+passenger1 = Passenger('Patrick Clancy', '06/05/97', 'British', '73469573')
+passenger2 = Passenger('Georgina Hough', '31/07/98', 'British', '34392642')
+passenger3 = Passenger('Lauren Radtke', '08/04/16', 'Austria', '63856975')

@@ -8,6 +8,7 @@ class Staff(People):
         self.airline = airline
         self.title = title
         self.__tax_no = tax_no
+        self.details = {}
 
     def get_airline(self):
         return self.airline
@@ -34,18 +35,30 @@ class Staff(People):
         print(f"Tax number updated for person:   {name}\nNew tax no:   {self.__tax_no}")
 
 
-# STAFF ROSTER
-crew1 = Staff('Steve', 'BA', 'Cabin Crew', '17/06/89', 7305734, 'USA')
-crew2 = Staff('Caragh', 'BA', 'Cabin Crew', '29/05/95', 4846473, 'Kenya')
-crew3 = Staff('Chloe', 'BA', 'Cabin Crew', '29/11/97', 9384322, 'UK')
-crew4 = Staff('Laura', 'BA', 'Cabin Crew', '04/08/96', 7731032, 'UK')
-crew5 = Staff('Fergus', 'Aer Lingus', 'Cabin Crew', '14/01/95', 4479756, 'UK')
-crew6 = Staff('Niamh', 'Aer Lingus', 'Cabin Crew', '13/04/93', 1004624, 'Ireland')
+    def staff_details(self):
+        self.details = {
+            "Name": self.get_full_name(),
+            "DOB": self.get_dob(),
+            "Nationality": self.nationality,
+            "Title": self.title,
+            "Airline": self.airline,
+            "Tax No.": self.__tax_no,
+        }
+        for key, value in self.details.items():
+            print(key, ": ", value)
 
-pilot1 = Staff('Martin', 'BA', 'Pilot', '19/11/68', 9927729, 'Switzerland')
-pilot2 = Staff('Ed', 'BA', 'Pilot', '18/10/71', 4137972, 'UK')
-pilot3 = Staff('Declan', 'Aer Lingus', 'Pilot', '06/06/78', 8493799, 'Ireland')
-copilot1 = Staff('Wessel', 'BA', 'Copilot', '20/03/92', 6229163, 'Netherlands')
-copilot2 = Staff('Fabio', 'BA', 'Copilot', '23/04/82', 5528631, 'Italy')
-copilot3 = Staff('Wanda', 'American Airlines', 'Copilot', '07/02/88', 7583957, 'USA')
-copilot4 = Staff('James', 'BA', 'Copilot', '04/01/86', 6202775, 'UK')
+# STAFF ROSTER
+crew1 = Staff('Steve Martin', 'BA', 'Cabin Crew', '17/06/89', 7305734, 'USA')
+crew2 = Staff('Caragh Cowan', 'BA', 'Cabin Crew', '29/05/95', 4846473, 'Kenya')
+crew3 = Staff('Chloe McDonald', 'BA', 'Cabin Crew', '29/11/97', 9384322, 'UK')
+crew4 = Staff('Laura Philips', 'BA', 'Cabin Crew', '04/08/96', 7731032, 'UK')
+crew5 = Staff('Fergus McFadden', 'Aer Lingus', 'Cabin Crew', '14/01/95', 4479756, 'UK')
+crew6 = Staff('Niamh Quillagan', 'Aer Lingus', 'Cabin Crew', '13/04/93', 1004624, 'Ireland')
+
+pilot1 = Staff('Martin Clunes', 'BA', 'Pilot', '19/11/68', 9927729, 'Switzerland')
+pilot2 = Staff('Ed Balls', 'BA', 'Pilot', '18/10/71', 4137972, 'UK')
+pilot3 = Staff('Declan Smith', 'Aer Lingus', 'Pilot', '06/06/78', 8493799, 'Ireland')
+copilot1 = Staff('Wessel Withoos', 'BA', 'Copilot', '20/03/92', 6229163, 'Netherlands')
+copilot2 = Staff('Fabio Capello', 'BA', 'Copilot', '23/04/82', 5528631, 'Italy')
+copilot3 = Staff('Wanda McVey', 'American Airlines', 'Copilot', '07/02/88', 7583957, 'USA')
+copilot4 = Staff('James Jamison', 'BA', 'Copilot', '04/01/86', 6202775, 'UK')
