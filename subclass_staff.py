@@ -34,8 +34,6 @@ class Staff(People):
         print(f"Tax number updated for person:   {name}\nNew tax no:   {self.__tax_no}")
 
 
-
-
 # STAFF ROSTER
 crew1 = Staff('Steve', 'BA', 'Cabin Crew', '17/06/89', 7305734, 'USA')
 crew2 = Staff('Caragh', 'BA', 'Cabin Crew', '29/05/95', 4846473, 'Kenya')

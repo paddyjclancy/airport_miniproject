@@ -6,7 +6,7 @@ class Flight(Airport):
 
     def __init__(self, flight, departure, destination, flight_time, plane, capacity, manifest=None):
         self.flight = flight.capitalize()
-        self.departure = int(departure)
+        self.departure = departure
         Flight.instances.append(self.flight)
         self.destination = destination.capitalize()
         self.flight_time = flight_time

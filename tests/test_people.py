@@ -29,7 +29,7 @@ new_name = "Steve Austin"
 new_dob = "11/09/66"
 new_nat = "Canada"
 # Test 2: Set Methods
-print("Testing set methods with instance: test_subject = People('Steve Martin', '11/09/65', 'USA')")
+print("\nTesting set methods with instance: test_subject = People('Steve Martin', '11/09/65', 'USA'):")
 print("\nTesting method:  set_full_name()")
 test_subject.set_full_name("Steve Austin")
 print(f"Test result: {exp_name} --> {test_subject.get_full_name()}")

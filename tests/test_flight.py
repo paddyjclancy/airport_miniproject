@@ -3,13 +3,13 @@ from subclass_passengers import *
 from subclass_staff import *
 
 
-pioneer = Flight('Pioneer', '0800', 'Paris', '1h20m', 'A321', 300)
+pioneer = Flight('Pioneer', '08:00', 'Paris', '1h20m', 'A321', 300)
 
 # ----------------------------------------------------------
 # Test 1: Making adjustment to flight report
 print("Testing method: delay()")
 print("Delaying departure time by one hour...")
-pioneer.delay("0945")
+pioneer.delay("09:45")
 print("Result: ", pioneer.departure == "09:45")
 
 print("\nTesting method: divert()")
@@ -35,8 +35,8 @@ print("\nTesting: append_manifest()...")
 print(f"Current manifest: {pioneer.manifest}")
 pioneer.append_manifest(crew1)
 pioneer.append_manifest(crew2)
-pioneer.append_manifest(pilot)
-pioneer.append_manifest(copilot)
+pioneer.append_manifest(pilot1)
+pioneer.append_manifest(copilot1)
 pioneer.append_manifest(passenger1)
 pioneer.append_manifest(passenger2)
 pioneer.append_manifest(passenger3)
