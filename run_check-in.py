@@ -36,7 +36,7 @@ while objective != "Exit":
         new_bp = ''.join(new_bp_raw)
 
         passenger4 = Passenger(new_name, new_dob, new_nationality, new_pp, new_t_type, new_bp)
-        passenger4.passenger_details()
+
         # Needs appending
     elif objective == "Flight Status":
         break

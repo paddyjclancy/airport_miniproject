@@ -76,3 +76,8 @@ test_subject.set_ticket_type("First")
 output5 = test_subject.get_ticket_type()
 print(f"Test result:  {output5}")
 print(output5 == exp_new_ticket)
+
+# Full passenger details:
+print("\nCompleted passenger details...\n")
+test_subject.passenger_details()
+

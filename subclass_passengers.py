@@ -12,6 +12,7 @@ class Passenger(People):
         self.passport_no = passport_no
         self.ticket_type = ticket_type
         self.ticket_price = ticket_price
+        self.details = {}
 
     def purchase_ticket(self, ticket_type):
         if ticket_type == "First":
@@ -60,9 +61,17 @@ class Passenger(People):
         return f"Ticket type updated for passenger: {name}, to {self.ticket_type}"
 
     def passenger_details(self):
-        report = vars(self)
-        for key, value in report.items():
-            return key.capitalize(), ": ", value
+        self.details = {
+            "Name" : self.get_full_name(),
+            "DOB" : self.get_dob(),
+            "Nationality" : self.nationality,
+            "Passport" : self.passport_no,
+            "Ticket" : self.ticket_type,
+            "Ticket Price" : self.ticket_price,
+            "Boarding Pass" : self.boarding_pass
+        }
+        for key, value in self.details.items():
+            print(key, ": ", value)
 
 
 passenger1 = Passenger('Paddy', '06/05/97', 'British', '73469573')
