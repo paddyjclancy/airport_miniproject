@@ -5,12 +5,19 @@ from class_flights import *
 
 
 this_flight = pioneer
-
-staff_roster = [pilot1, pilot2, pilot3, copilot1, copilot2, copilot3, copilot4, crew1, crew2, crew3, crew4, crew5, crew6]
-this_flight.append_manifest(pilot1)
+flight_captain = []
+this_flight.append_manifest(pilot3)
 this_flight.append_manifest(copilot1)
+
+
+for p in this_flight.manifest:
+    if isinstance(p, Staff):
+        cockpit = p.get_full_name()
+        flight_captain.append(cockpit)
+
 this_flight.append_manifest(passenger1)
 this_flight.append_manifest(passenger2)
+# this_flight.append_manifest(passenger3)
 
 password = "happy flighting"
 entry = ""
@@ -54,7 +61,7 @@ while objective.strip().lower() != "exit":
             new_pp = input("Enter passenger passport details:   ")
             new_t_type = input("Requested ticket type:   ")
             new_passenger = Passenger(new_name, new_dob, new_nationality, new_pp, pass_id, new_t_type)
-            new_passenger.set_boarding_pass()
+            new_passenger.purchase_ticket(new_t_type)
             this_flight.append_manifest(new_passenger)
             pass_id += 1
 
@@ -67,6 +74,7 @@ while objective.strip().lower() != "exit":
         edit = ""
         print(f"\n")
         this_flight.show_report()
+        print(f"Pilot:  {flight_captain[0]} \nCopilot:  {flight_captain[1]}")
 
         while edit.strip().upper() != "EXIT":
             edit = input(f"\nMake changes to flight: {this_flight.flight}? \n   DELAY / DIVERT / CHANGE / EXIT      ")
@@ -83,6 +91,7 @@ while objective.strip().lower() != "exit":
         time.sleep(1)
         print(f"\n Updated flight status:")
         this_flight.show_report()
+        print(f"Pilot:  {flight_captain[0]} \nCopilot:  {flight_captain[1]}")
 
     elif objective.strip().lower() == "flight manifest":
         which_manifest = ""
@@ -106,6 +115,9 @@ while objective.strip().lower() != "exit":
         for p in this_flight.manifest:
             if isinstance(p, Staff):
                 print(p.get_full_name())
+        print("\nStaff available for assignment: ")
+        for s in staff_roster:
+            print(s.get_full_name())
         while assigned.strip().lower() != "x":
             assigned = input("\nEnter staff to assign. Enter 'x' when complete:   ")
             for s in staff_roster:

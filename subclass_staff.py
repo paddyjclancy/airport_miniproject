@@ -8,7 +8,7 @@ class Staff(People):
         self.airline = airline
         self.title = title
         self.__tax_no = tax_no
-        self.details = {}
+
 
     def get_airline(self):
         return self.airline
@@ -48,17 +48,20 @@ class Staff(People):
             print(key, ": ", value)
 
 # STAFF ROSTER
+
 crew1 = Staff('Steve Martin', 'BA', 'Cabin Crew', '17/06/89', 7305734, 'USA')
 crew2 = Staff('Caragh Cowan', 'BA', 'Cabin Crew', '29/05/95', 4846473, 'Kenya')
 crew3 = Staff('Chloe McDonald', 'BA', 'Cabin Crew', '29/11/97', 9384322, 'UK')
-crew4 = Staff('Laura Philips', 'BA', 'Cabin Crew', '04/08/96', 7731032, 'UK')
-crew5 = Staff('Fergus McFadden', 'Aer Lingus', 'Cabin Crew', '14/01/95', 4479756, 'UK')
-crew6 = Staff('Niamh Quillagan', 'Aer Lingus', 'Cabin Crew', '13/04/93', 1004624, 'Ireland')
+crew4 = Staff('Tash Sultana', 'BA', 'Cabin Crew', '04/08/96', 7731032, 'Australia')
+crew5 = Staff('Liam Neeson', 'Aer Lingus', 'Cabin Crew', '14/01/95', 4479756, 'UK')
+crew6 = Staff('Aisling Bea', 'Aer Lingus', 'Cabin Crew', '13/04/93', 1004624, 'Ireland')
 
 pilot1 = Staff('Martin Clunes', 'BA', 'Pilot', '19/11/68', 9927729, 'Switzerland')
 pilot2 = Staff('Ed Balls', 'BA', 'Pilot', '18/10/71', 4137972, 'UK')
-pilot3 = Staff('Declan Smith', 'Aer Lingus', 'Pilot', '06/06/78', 8493799, 'Ireland')
+pilot3 = Staff('Chris Hadfield', 'Aer Lingus', 'Pilot', '06/06/78', 8493799, 'Canada')
 copilot1 = Staff('Wessel Withoos', 'BA', 'Copilot', '20/03/92', 6229163, 'Netherlands')
 copilot2 = Staff('Fabio Capello', 'BA', 'Copilot', '23/04/82', 5528631, 'Italy')
-copilot3 = Staff('Wanda McVey', 'American Airlines', 'Copilot', '07/02/88', 7583957, 'USA')
-copilot4 = Staff('James Jamison', 'BA', 'Copilot', '04/01/86', 6202775, 'UK')
+copilot3 = Staff('Whoopi Goldberg', 'American Airlines', 'Copilot', '07/02/88', 7583957, 'USA')
+copilot4 = Staff('Paul McCartney', 'BA', 'Copilot', '04/01/86', 6202775, 'UK')
+
+staff_roster =[crew6, crew2, crew3, crew5, crew1, crew4]

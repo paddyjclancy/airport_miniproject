@@ -5,15 +5,15 @@ from class_people import *
 
 class Passenger(People):
 
-    def __init__(self, full_name, dob, nationality, passport_no, passenger_id=None, ticket_type=None, ticket_price=None,
+    def __init__(self, full_name, dob, nationality, passport_no, ticket_type=None, ticket_price=None,
                  boarding_pass=None):
         super().__init__(full_name, dob, nationality)
         self.boarding_pass = boarding_pass
         self.passport_no = passport_no
-        self.passenger_id = passenger_id
+        # self.passenger_id = "Online check-in"
         self.ticket_type = ticket_type
         self.ticket_price = ticket_price
-        self.details = {}
+
 
     def purchase_ticket(self, ticket_type):
         if ticket_type == "First":
@@ -21,8 +21,8 @@ class Passenger(People):
             self.ticket_price = 1000
             self.set_boarding_pass()
 
-        elif ticket_type == "Infant":
-            self.ticket_type = "Infant"
+        elif ticket_type == "Minor":
+            self.ticket_type = "Minor"
             self.ticket_price = 0
             self.set_boarding_pass()
 
@@ -38,7 +38,7 @@ class Passenger(People):
         if self.ticket_type == "First":
             new_bp = "BA-1", str(randint(99, 999)), "-", str(randint(999, 9999))
             self.boarding_pass = ''.join(new_bp)
-        elif self.ticket_type == "Infant":
+        elif self.ticket_type == "Minor":
             new_bp = "BA-9", str(randint(99, 999)), "-", str(randint(999, 9999))
             self.boarding_pass = ''.join(new_bp)
         elif self.ticket_type == "Economy":
@@ -76,5 +76,8 @@ class Passenger(People):
 
 
 passenger1 = Passenger('Patrick Clancy', '06/05/97', 'British', '73469573')
-passenger2 = Passenger('Georgina Hough', '31/07/98', 'British', '34392642')
-passenger3 = Passenger('Lauren Radtke', '08/04/16', 'Austria', '63856975')
+passenger1.purchase_ticket("First")
+passenger2 = Passenger('Jimi Hendrix', '31/07/98', 'USA', '34392642')
+passenger2.purchase_ticket("First")
+passenger3 = Passenger('Greta T', '08/04/16', 'Sweden', '63856975')
+passenger3.purchase_ticket("Minor")

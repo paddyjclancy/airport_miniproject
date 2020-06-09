@@ -23,7 +23,18 @@ class Flight(Airport):
         self.destination = new_destination
 
     def alter_aircraft(self, new_plane):
-        self.plane = new_plane
+        if new_plane == "A320":
+            self.plane = "A320"
+            self.capacity = 150
+        elif new_plane == "A321":
+            self.plane = "A321"
+            self.capacity = 200
+        elif new_plane == "B-787":
+            self.plane = "B-787"
+            self.capacity = 300
+        elif new_plane.lower() == "space shuttle":
+            self.plane = "Space Shuttle"
+            self.capacity = 7
 
     def show_report(self):
         report = vars(self)
