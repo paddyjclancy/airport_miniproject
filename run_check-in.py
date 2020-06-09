@@ -9,7 +9,6 @@ flight_captain = []
 this_flight.append_manifest(pilot3)
 this_flight.append_manifest(copilot1)
 
-
 for p in this_flight.manifest:
     if isinstance(p, Staff):
         cockpit = p.get_full_name()
